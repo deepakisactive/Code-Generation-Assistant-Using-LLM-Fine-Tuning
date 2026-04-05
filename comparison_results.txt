@@ -1,0 +1,131 @@
+
+==================================================
+PROMPT:
+Fix the bug in this code: def factorial(n): return n * factorial(n-1)
+
+BASE MODEL OUTPUT:
+### Instruction:
+Fix the bug in this code: def factorial(n): return n * factorial(n-1)
+
+### Response:
+I'm not able to run the code you provided. Can you please provide me with the code that you're referring to?
+
+FINE-TUNED MODEL OUTPUT:
+### Instruction:
+Fix the bug in this code: def factorial(n): return n * factorial(n-1)
+
+### Response:
+def factorial(n):
+    if n == 0: return 1
+    return n * factorial(n-1)
+==================================================
+
+==================================================
+PROMPT:
+Convert this Python code to Java: def add(a,b): return a+b
+
+BASE MODEL OUTPUT:
+### Instruction:
+Convert this Python code to Java: def add(a,b): return a+b
+
+### Response:
+```java
+public class Add {
+    public static void main(String[] args) {
+        int a = 5, b = 10;
+        int result = add(a, b);
+        System.out.println("The sum of " + a + " and " + b + " is " + result);
+    }
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+### Output:
+```java
+The sum of 5 and 10 is 15
+```
+
+FINE-TUNED MODEL OUTPUT:
+### Instruction:
+Convert this Python code to Java: def add(a,b): return a+b
+
+### Response:
+public int add(int a, int b) { return a + b; }
+==================================================
+
+==================================================
+PROMPT:
+Write optimized Python code to remove duplicates from a list
+
+BASE MODEL OUTPUT:
+### Instruction:
+Write optimized Python code to remove duplicates from a list
+
+### Response:
+```python
+def remove_duplicates(lst):
+    # Create a new list to store the unique elements
+    unique_lst = []
+    
+    # Loop through the original list and add each element to the unique list
+    for elem in lst:
+        if elem not in unique_lst:
+            unique_lst.append(elem)
+    
+    # Return the unique list
+    return unique_lst
+
+# Example usage
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+unique_lst = remove_duplicates(lst)
+print(unique_lst)
+```
+
+FINE-TUNED MODEL OUTPUT:
+### Instruction:
+Write optimized Python code to remove duplicates from a list
+
+### Response:
+def removeDuplicates(lst):
+    if not lst: return []
+    n = len(lst)
+    for i in range(n):
+        if lst[i] != lst[i+1]: lst[i+1] = lst[i]
+    return lst[:n]
+==================================================
+
+==================================================
+PROMPT:
+Create a FastAPI endpoint to upload a file
+
+BASE MODEL OUTPUT:
+### Instruction:
+Create a FastAPI endpoint to upload a file
+
+### Response:
+If the file is uploaded successfully, the response will contain a JSON object with the uploaded file's name and its URL.
+
+### Error handling:
+If the file is not uploaded successfully, the response will contain an error message.
+
+### Testing:
+To test the endpoint, you can use a tool like Postman or a local server.
+
+FINE-TUNED MODEL OUTPUT:
+### Instruction:
+Create a FastAPI endpoint to upload a file
+
+### Response:
+
+import os
+
+@app.post("/upload")
+async def upload_file(file: File):
+    filename = os.path.basename(file.filename)
+    with open(file.filename, "wb") as f:
+        await f.write(await file.read())
+    return {"filename": filename}
+==================================================

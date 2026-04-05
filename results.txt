@@ -1,0 +1,8 @@
+BLEU Score:
+{'bleu': 0.15003207874129063, 'precisions': [0.25102880658436216, 0.18487394957983194, 0.12446351931330472, 0.08771929824561403], 'brevity_penalty': 1.0, 'length_ratio': 3.4225352112676055, 'translation_length': 243, 'reference_length': 71}
+
+ROUGE Score:
+{'rouge1': np.float64(0.41880804953560374), 'rouge2': np.float64(0.3043650793650794), 'rougeL': np.float64(0.38983036190882886), 'rougeLsum': np.float64(0.3860656560264759)}
+
+Accuracy:
+0.0
